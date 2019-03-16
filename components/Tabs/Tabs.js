@@ -17,7 +17,7 @@ class TabLink {
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       // this.cards = ;
-      this.cards = document.querySelectorAll(`.card[data-tab='${this.tabElement.dataset.tab}']`);
+      this.cards = document.querySelectorAll(`.cards[data-tab='${this.tabElement.dataset.tab}']`);
     }
    
 
@@ -25,10 +25,11 @@ class TabLink {
     // this.cards = Array.from(this.cards).map();
     this.cards = Array.from(this.cards).map(card => new TabCard(card));   // Add a click event that invokes this.selectTab
     // this.tabElement.addEventListener();
-    this.tabElement.addEventListener("click", () => {this.selectTab()};
+    this.tabElement.addEventListener("click", this.selectTab.bind(this));
   }
 
   selectTab(){
+    console.log("i was clicked");
     // Select all elements with the .tab class on them
     // const tabs = document.querySelectorAll();
     const tabs = document.querySelectorAll(".tab");
