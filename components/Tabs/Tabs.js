@@ -17,7 +17,7 @@ class TabLink {
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       // this.cards = ;
-      this.cards = document.querySelectorAll(`.cards[data-tab='${this.tabElement.dataset.tab}']`);
+      this.cards = document.querySelectorAll(`.card[data-tab='${this.tabElement.dataset.tab}']`);
     }
    
 
